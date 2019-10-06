@@ -1,7 +1,6 @@
 # I-Am-Woman
 
 * Сайт: [I-Am-Woman](https://rhm5.github.io/I-Am-Woman/)
-* Дизайн: [HTML Academy](https://htmlacademy.ru/)
 
 
 ## Описание
