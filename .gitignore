@@ -1,0 +1,14 @@
+﻿node_modules/
+build/
+template/*.jpg
+psd/
+.publish/
+.DS_Store
+*.ai
+*.log
+*.pdf
+*.rar
+*.zip
+Thumbs.db
+src/img/sprite.png
+src/less/sprite.less

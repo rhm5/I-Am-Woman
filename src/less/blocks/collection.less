@@ -1,0 +1,293 @@
+.collection--closed {
+  display: none;
+}
+
+
+.collection__paginator,
+.slider__switch,
+.collection__item-info,
+.collection__social {
+  display: none;
+}
+
+.collection__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -67px;
+}
+
+
+#collection-switch-1:checked~.collection__toggles .slider__toggle[for="collection-switch-1"],
+#collection-switch-2:checked~.collection__toggles .slider__toggle[for="collection-switch-2"],
+#collection-switch-3:checked~.collection__toggles .slider__toggle[for="collection-switch-3"] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid @altBack-1;
+  background: transparent;
+  opacity: 0.3;
+}
+
+
+#collection-switch-1:checked~.slider__items {
+  transform: translate(0);
+}
+
+#collection-switch-1:checked~.slider__commands {
+  display: none;
+}
+
+#collection-switch-1:checked~.slider__commands1 {
+  display: block;
+}
+
+
+#collection-switch-2:checked~.slider__items {
+  transform: translate(-33.333333%);
+}
+
+#collection-switch-2:checked~.slider__commands {
+  display: none;
+}
+
+#collection-switch-2:checked~.slider__commands2 {
+  display: block;
+}
+
+
+#collection-switch-3:checked~.slider__items {
+  transform: translate(-66.666666%);
+}
+
+#collection-switch-3:checked~.slider__commands {
+  display: none;
+}
+
+#collection-switch-3:checked~.slider__commands3 {
+  display: block;
+}
+
+
+.collection__item {
+  position: relative;
+  z-index: -1;
+  min-height: 490px;
+  padding-top: 51px;
+  background-repeat: no-repeat;
+
+  &--dress {
+    background: url("../img/icons8-team-bg-mobile.jpg");
+  }
+
+  &--suit {
+    background: url("../img/dom-hill-bg-mobile.jpg");
+  }
+
+  &--robe {
+    background: url("../img/raechel-romero-bg-mobile.jpg");
+  }
+}
+
+
+.collection__image {
+  padding-left: 86px;
+}
+
+
+
+@media @tablet-width {
+
+  
+  .collection__wrapper {
+    width: 100%;
+    margin-top: -91px;
+    text-align: right;
+  }
+
+
+  .collection__item {
+    min-height: 823px;
+    padding-top: 91px;
+    background-repeat: no-repeat;
+    background-position: 103.9% 0;
+
+    &--dress {
+      background-image: url("../img/icons8-team-bg-tablet.jpg");
+    }
+
+    &--suit {
+      background-image: url("../img/dom-hill-bg-tablet.jpg");
+    }
+
+    &--robe {
+      background-image: url("../img/raechel-romero-bg-tablet.jpg");
+    }
+  }
+
+
+  .collection__item-info {
+    position: absolute;
+    display: block;
+    bottom: 132px;
+    right: 43px;
+    width: 344px;
+    height: 98px;
+    padding: 21px 32px 0 24px;
+    color: @tertiaryColor;
+    border-radius: 2px;
+    background-color: rgba(236, 229, 225, 0.8);
+
+    h3 {
+      margin-bottom: 2px;
+      .font(full; 24px; 24px; @primaryFF; 700);
+      letter-spacing: -0.08px;
+    }
+
+    span {
+      position: relative;
+      padding-right: 8px;
+      .font(full; 16px; 16px; @primaryFF; 700);
+      letter-spacing: 0.1px;
+      text-align: right;
+
+      &:before {
+        .def-pseudo();
+        top: 13px;
+        right: 110px;
+        width: 72px;
+        height: 2px;
+        background-color: @altBack-3;
+      }
+    }
+
+    &--suit {
+      right: 59px;
+      padding: 22px 28px 0 19px;
+
+      span {
+        padding-right: 0;
+      }
+    }
+  }
+
+
+  .collection__image {
+    padding-right: 42px;
+  }
+
+
+  .collection__social {
+    display: flex;
+    width: 352px;
+    height: auto;
+    margin-left: 81px;
+  }
+
+
+  .collection__social-item {
+    position: relative;
+    margin-right: 40px;
+    color: @primaryColor;
+    .font(full; 11px; 11px; @secondaryFF; 400);
+    letter-spacing: 0.53px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &--youtube:before,
+    &--youtube:after {
+      .def-pseudo();
+      top: 7px;
+      left: -30px;
+      width: 20px;
+      height: 1.3px;
+      background-color: @altBack-1;
+    }
+
+    &--youtube:after {
+      left: 57px;
+    }
+  }
+}
+
+
+
+@media @desktop-width {
+  .collection {
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .collection__wrapper {
+    margin-bottom: -101px;
+  }
+
+  .collection__item {
+    min-height: 839px;
+    padding-top: 79px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+
+    &--dress {
+      background-image: url("../img/icons8-team-bg.jpg");
+    }
+
+    &--suit {
+      background-image: url("../img/dom-hill-bg.jpg");
+    }
+
+    &--robe {
+      background-image: url("../img/raechel-romero-bg.jpg");
+    }
+  }
+
+
+  .collection__item-info {
+    bottom: 155px;
+    right: 340px;
+    width: 367px;
+    height: 104px;
+    padding: 24px 44px 0 16px;
+
+    span {
+      padding-right: 0px;
+      letter-spacing: 0.9px;
+    }
+  }
+  
+
+  .collection__image {
+    padding-right: 220px;
+  }
+
+
+  .collection__social {
+    width: 400px;
+    margin-left: 210px;
+  }
+
+
+  .collection__social-item {
+    margin-right: 45px;
+    .font(shortest; 16px; 16px);
+    letter-spacing: 0;
+
+    &--youtube {
+      margin-right: 44px;
+    }
+
+    &--youtube:before,
+    &--youtube:after {
+      top: 11px;
+      left: -34px;
+      width: 24px;
+    }
+
+    &--youtube:after {
+      left: 73px;
+    }
+  }
+}

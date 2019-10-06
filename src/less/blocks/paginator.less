@@ -1,0 +1,62 @@
+@media @desktop-width {
+
+  .paginator,
+  .new .paginator,
+  .about .paginator {
+    position: absolute;
+    top: 262px;
+    right: 84px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .new .paginator {
+    top: 484px;
+    right: 38px;
+  }
+  
+
+  .about .paginator {
+    top: 667px;
+    right: 38px;
+  }
+  
+
+  .paginator__item {
+    margin-bottom: 33px;
+    color: @primaryColor;
+    .font(full; 12px; 16px; @secondaryFF; 400);
+    cursor: pointer;
+
+
+    &--active {
+      position: relative;
+      order: -1;
+      margin-bottom: 134px;
+      color: @tertiaryColor;
+      .font(full; 16px; 16px; @secondaryFF; 600);
+      cursor: auto;
+
+      &:after {
+        .def-pseudo();
+        width: 94px;
+        height: 1px;
+        top: 76px;
+        left: -39px;
+        transform: rotate(90deg);
+        background: @altBack-1;
+      }
+    }
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &--active:hover {
+      opacity: 1;
+    }
+  }
+}

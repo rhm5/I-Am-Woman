@@ -1,0 +1,176 @@
+.subscribe {
+  width: 100%;
+  margin-bottom: 90px;
+}
+
+.subscribe__wrapper {
+  width: 100%;
+  height: 437px;
+  padding-top: 24px;
+  background: url("../img/ashim-d-silva-mobile.jpg") no-repeat center 0;
+  background-size: cover;
+}
+
+
+.subscribe__content {
+  width: 285px;
+  height: 389px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(240, 234, 231, 0.9);
+
+}
+
+
+.subscribe__title {
+  padding: 65px 52px 24px 52px;
+  color: @tertiaryColor;
+  .font(full; 18px; 22px; @tertiaryFF; 400);
+}
+
+
+.subscribe__text {
+  width: 181px;
+  margin: 0 auto;
+  margin-bottom: 41px;
+  color: @primaryColor;
+  .font(full; 14px; 14px; @primaryFF; 300);
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid @altBack-1;
+  text-align: center;
+  letter-spacing: 0.68px;
+}
+
+
+.subscribe__btn {
+  width: 156px;
+  height: 36px;
+  padding: 9px 36px 12px;
+  color: @quaternaryColor;
+  .font(full; 16px; 16px; @primaryFF; 400);
+  border-radius: 2px;
+  background: @tertiaryColor;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+
+.subscribe__comment {
+  padding: 8px 22px 10px 23px;
+  .font(full; 10px; 12px; @secondaryFF; 300);
+  color: @primaryColor;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+@media @tablet-width {
+
+  .subscribe {
+    margin: 0 8px;
+    margin-bottom: 142px;
+  }
+
+
+  .subscribe__wrapper {
+    height: 437px;
+    padding-top: 51px;
+    background: url("../img/ashim-d-silva-tablet.jpg") no-repeat center 0;
+  }
+
+
+  .subscribe__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 556px;
+    height: 336px;
+    background: rgba(240, 234, 231, 0.8);
+  }
+
+
+  .subscribe__title {
+    padding: 63px 52px 29px 52px;
+    .font(shortest; 24px; 28px);
+  }
+
+
+  .subscribe__text {
+    margin-bottom: 31px;
+  }
+
+
+  .subscribe__comment {
+    padding: 7px 148px 10px 148px;
+    .font(shortest; 11px; 13px);
+    letter-spacing: 0.55px;
+  }
+}
+
+
+
+@media @desktop-width {
+
+  .subscribe {
+    margin-bottom: 160px;
+    margin-left: 8px;
+  }
+
+
+  .subscribe__wrapper {
+    width: 1180px;
+    height: 499px;
+    margin: 0 auto;
+    padding: 42px 142px 62px 162px;
+    background: url("../img/ashim-d-silva.jpg") no-repeat center 0;
+  }
+
+
+  .subscribe__content {
+    width: 876px;
+    height: 395px;
+    margin: 0;
+  }
+
+
+  .subscribe__title {
+    padding: 69px 103px 33px 102px;
+    .font(shortest; 36px; 43px);
+  }
+
+
+  .subscribe__text {
+    width: 271px;
+    margin-left: 309px;
+    margin-bottom: 24px;
+    .font(shortest; 16px; 16px);
+    border-bottom: 2px solid @altBack-1;
+    letter-spacing: 0.8px;
+  }
+
+
+  .subscribe__btn {
+    width: 167px;
+    margin-left: 18px;
+    padding: 7px 36px 12px;
+    .font(shortest; 18px; 18px);
+  }
+
+
+  .subscribe__comment {
+    padding: 12px 290px 10px 289px;
+    .font(shortest; 12px; 14px);
+    letter-spacing: 0.6px;
+  }
+}

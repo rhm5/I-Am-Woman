@@ -1,0 +1,418 @@
+.nav {
+  position: relative;
+  z-index: 2;
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 42;
+
+  width: 23px;
+  height: 23px;
+  padding: 0;
+
+  cursor: pointer;
+  background: url("../img/close.svg") no-repeat;
+  font-size: 0;
+
+  &:hover,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav--closed .nav__toggle {
+  width: 33px;
+  height: 16px;
+  top: 9px;
+  left: 15px;
+  background: url("../img/burger.svg") no-repeat;
+}
+
+.nav__content {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 9px;
+  padding-left: 39px;
+}
+
+.nav__title {
+  padding: 94px 0 30px;
+  .font(full; 24px; 24px; @primaryFF; 400);
+}
+
+.nav__wrapper-opened {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav__list-catalog {
+  margin-right: 12px;
+}
+
+.nav__item {
+  margin: -3px 0;
+}
+
+.nav__item a {
+  display: block;
+  padding: 0 15px 15px 0;
+  color: @primaryColor;
+  .font(full; 16px; 20px; @primaryFF; 400);
+  text-align: left;
+  transition:
+    color 0.2s linear,
+    opacity 0.2s linear;
+
+  &[href]:hover,
+  &[href]:active {
+    color: @tertiaryColor;
+    opacity: 0.6;
+  }
+}
+
+.nav__inner,
+.nav__list-sale,
+.nav__list-search,
+.nav__search,
+.nav--nojs .nav__toggle,
+.nav--closed .nav__item,
+.nav--closed .nav__title {
+  display: none;
+}
+
+.nav--nojs .nav__item,
+.nav--nojs .nav__title {
+  display: block;
+}
+
+.nav__list-icons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 105px;
+
+  & .nav__item a {
+    font-size: 0;
+  }
+}
+
+.nav--closed .nav__list-icons .nav__item {
+  display: block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+
+  & a {
+    font-size: 0;
+  }
+
+  &--magnifier {
+    background: url("../img/magnifying-glass.svg") no-repeat;
+  }
+
+  &--avatar {
+    background: url("../img/avatar.svg") no-repeat;
+  }
+
+  &--bag {
+    background: url("../img/shopping-bag.svg") no-repeat;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+
+
+@media @tablet-width {
+
+  .nav__toggle {
+    top: 37px;
+    right: 37px;
+  }
+
+  .nav--closed .nav__toggle {
+    top: 40px;
+    left: 9px;
+  }
+
+  .nav__inner {
+    position: absolute;
+    display: block;
+    bottom: 175px;
+    left: -34px;
+  }
+
+  .nav__sale {
+    position: relative;
+    transform: rotate(270deg);
+    color: @primaryColor;
+    .font(short; 16px; 16px);
+
+    &::before {
+      .def-pseudo();
+      top: 9px;
+      left: -122px;
+      width: 94px;
+      height: 1px;
+      background: @altBack-1;
+    }
+  }
+
+  .nav--closed .nav__inner {
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 823px;
+    padding-top: 560px;
+    background: @altBack;
+
+    & .nav__sale {
+      width: 180px;
+      margin-left: -66px;
+      letter-spacing: -0.3px;
+      &::before {
+        left: -124px;
+      }
+    }
+  }
+
+  .nav__list-icons {
+    justify-content: flex-start;
+    top: 46px;
+    right: 42px;
+    width: 222px;
+  }
+
+  .nav--closed .nav__list-icons .nav__item {
+    width: 17px;
+    margin-right: 84px;
+
+    &:nth-child(2) {
+      margin-right: 87px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .nav__content {
+    width: 764px;
+    padding-top: 125px;
+    padding-left: 104px;
+  }
+
+  .nav__wrapper-opened {
+    margin-bottom: 106px;
+  }
+
+  .nav__list-catalog {
+    margin-right: 61px;
+
+    & .nav__item:nth-child(6) {
+      margin-bottom: 3px;
+    }
+
+    & .nav__item:nth-child(7) {
+      margin-bottom: 4px;
+    }
+  }
+
+  .nav__list-about {
+    margin-right: 41px;
+
+    & .nav__item:nth-child(7),
+    & .nav__item:last-child {
+      display: none;
+    }
+  }
+
+  .nav__list-sale,
+  .nav__search {
+    display: block;
+  }
+
+  .nav__list-search,
+  .nav__search {
+    position: relative;
+    padding-left: 1px;
+
+    & input::-webkit-input-placeholder {
+      color: @secondaryColor;
+      .font(full; 18px; 18px; @primaryFF; 400);
+    }
+
+    & input:-moz-placeholder {
+      color: @secondaryColor;
+      .font(full; 18px; 18px; @primaryFF; 400);
+    }
+
+    & input:-ms-input-placeholder {
+      color: @secondaryColor;
+      .font(full; 18px; 18px; @primaryFF; 400);
+    }
+
+    & input {
+      width: 283px;
+      padding: 6px 50px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid @altBack-1;
+      outline: none;
+    }
+
+    & button {
+      position: absolute;
+      top: 8px;
+      left: 2px;
+      width: 17px;
+      height: 17px;
+      background: transparent url("../img/magnifying-glass.svg") no-repeat;
+      font-size: 0;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .nav--closed .nav__search {
+    display: none;
+  }
+
+  .nav__item a {
+    padding: 0 15px 26px 0;
+    .font(short; 18px; 18px);
+  }
+}
+
+
+
+@media @desktop-width {
+
+  .nav__toggle {
+    top: 50px;
+    right: 90px;
+  }
+
+  .nav--closed .nav__toggle {
+    top: 39px;
+    left: 21px;
+  }
+
+  .nav__inner {
+    bottom: 103px;
+    left: -40px;
+  }
+
+  .nav__sale {
+    .font(short; 18px; 18px);
+    letter-spacing: 0.99px;
+
+    &::before {
+      top: 12px;
+      left: -123px;
+    }
+  }
+
+  .nav--closed .nav__inner {
+    width: 75px;
+    height: 759px;
+    padding-top: 503px;
+
+    & .nav__sale {
+      margin-left: -56px;
+      letter-spacing: 0.9px;
+    }
+  }
+
+  .nav--closed .nav__list-icons {
+    top: 38px;
+    right: 73px;
+    width: 293px;
+  }
+
+  .nav--closed .nav__list-icons .nav__item {
+    width: 20px;
+    height: 20px;
+    margin-right: 130px;
+
+    &:nth-child(2) {
+      margin-right: 103px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .nav__content {
+    width: 1180px;
+    padding-top: 121px;
+    padding-left: 27px;
+  }
+
+  .nav__item a {
+    padding: 0 0 26px 0;
+  }
+
+  .nav__list {
+    width: 140px;
+    margin-right: 145px;
+  }
+
+  .nav__list-sale,
+  .nav__list-about {
+    margin-right: 148px;
+
+    & .nav__item {
+      margin-bottom: 16px;
+    }
+
+    & .nav__item:nth-child(6),
+    & .nav__item:last-child {
+      display: none;
+    }
+
+    & .nav__item a {
+      padding: 6px 0 7px;
+    }
+  }
+
+  .nav__list-sale {
+    margin-right: 90px;
+  }
+
+  .nav__list-search {
+    display: block;
+    width: 182px;
+    margin-top: -4px;
+
+    & .nav__item {
+      margin-bottom: 31px;
+    }
+
+    & .nav__item:nth-child(2) {
+      margin-bottom: -4px;
+    }
+
+    & button {
+      top: 5px;
+    }
+  }
+
+  .nav__search {
+    display: none;
+  }
+}

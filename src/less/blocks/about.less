@@ -1,0 +1,186 @@
+.about__title {
+  width: 92px;
+  margin: 0 auto;
+  margin-bottom: 43px;
+  padding-top: 49px;
+  color: @tertiaryColor;
+  .font(full; 24px; 24px; @tertiaryFF; 400);
+}
+
+.about__paginator {
+  display: none;
+}
+
+
+.about__items {
+  .container();
+  height: 458px;
+}
+
+
+.about__item--right {
+  display: none;
+}
+
+
+.about__text-container {
+  position: relative;
+  width: 290px;
+  margin: 0 auto;
+}
+
+
+.about__descr {
+  position: absolute;
+  left: 0;
+  width: 290px;
+  color: @primaryColor;
+  .font(full; 16px; 1.2; @primaryFF; 300);
+  text-align: center;
+
+  &--top {
+    top: -436px;
+  }
+
+  &--middle {
+    top: -320px;
+    padding: 0 20px;
+  }
+
+  &--bottom {
+    top: -205px;
+    padding: 0 20px;
+  }
+}
+
+
+
+@media @tablet-width {
+
+  .about__title {
+    width: 198px;
+    margin-bottom: 63px;
+    padding-top: 41px;
+    padding-left: 53px;
+    .font(shortest; 36px; 36px);
+  }
+
+
+  .about__items {
+    display: flex;
+    .container();
+    height: 905px;
+  }
+
+  .about__item {
+
+    &--left {
+      margin-right: 20px;
+    }
+
+    &--right {
+      display: block;
+      margin-top: 358px;
+    }
+  }
+  
+
+  .about__text-container {
+    width: 320px;
+  }
+
+  .about__descr {
+    left: 251px;
+    width: 457px;
+    height: 101px;
+    padding: 0 27px;
+    background: rgba(240, 234, 231, 0.8);
+    text-align: left;
+
+    &--top {
+      top: -507px;
+      padding-top: 27px;
+    }
+
+    &--middle {
+      top: -406px;
+      padding-top: 3px;
+    }
+
+    &--bottom {
+      top: 86px;
+      left: -17px;
+      width: 432px;
+      height: 202px;
+      padding: 45px 20px 48px 15px;
+    }
+  }
+}
+
+
+
+@media @desktop-width {
+
+  .about {
+    position: relative;
+    .container();
+  }
+
+  .about__title {
+    width: 300px;
+    margin-bottom: 110px;
+    padding-top: 181px;
+    padding-left: 67px;
+    .font(shortest; 48px; 48px);
+  }
+
+
+  .about__paginator {
+    display: block;
+  }
+
+  .about__items {
+    width: 1033px;
+    height: 1112px;
+    padding-left: 150px;
+  }
+
+  .about__item {
+
+    &--left {
+      margin-right: 33px;
+    }
+
+    &--right {
+      margin-top: 441px;
+    }
+  }
+
+
+  .about__descr {
+    left: 330px;
+    width: 613px;
+    height: 121px;
+    padding: 0 41px;
+    .font(shortest; 20px; 1.2);
+
+    &--top {
+      top: -644px;
+      padding-top: 26px;
+    }
+
+    &--middle {
+      top: -523px;
+      height: 122px;
+      padding-top: 1px;
+    }
+
+    &--bottom {
+      top: 86px;
+      left: -88px;
+      width: 611px;
+      height: 243px;
+      padding: 63px 33px 60px 43px;
+    }
+  }
+}
